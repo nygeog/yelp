@@ -3,8 +3,18 @@ yelp
 
 So this yelp.R file I'm only getting the single first record returned. I'm trying to do this in R b/c I think (or the internet told me) that R is better with JSON with trailing data.
 
-So I'm assuming I need to do some sort of for loop.
 
+This is the R code I have so far, but only shows the first record.
+
+	json_file <- "/Users/danielmsheehan/Dropbox/GIS/Data/Commercial/yelp/yelp_phoenix_academic_dataset/yelp_academic_dataset_business.json"
+	json_data <- fromJSON(paste(readLines(json_file), collapse=""))
+
+	business <- json_data[("business_id")]
+	longitude <- json_data[("longitude")]
+	latitude <- json_data[("latitude")]
+
+
+So I'm assuming I need to do some sort of for loop.
 So like in python/R mixed it'd be something like
 
 	theFile = csv.reader(open(infile,"rb"))
