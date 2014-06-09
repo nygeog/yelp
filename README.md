@@ -28,3 +28,19 @@ So like in python/R mixed it'd be something like
     	latitude.append(json_data[("latitude")])
     	longitude.append(json_data[("longitude")])
   
+In R it seems like loops are weird so I guess I'm looking for something like this:
+
+	dataLIST1 = [] #empty list
+	dataLIST2 = []
+	dataLIST3 = []
+
+	for (i in RowsOfJSON) {
+		dataLIST1 = json_data[("business_id")]
+		dataLIST2 = json_data[("latitude")]
+		dataLIST3 = json_data[("longitude")]
+	}
+	
+	#then combine this lists as columns in a dataframe
+	
+	
+	
