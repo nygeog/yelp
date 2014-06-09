@@ -7,14 +7,13 @@ So I'm assuming I need to do some sort of for loop.
 
 So like in python/R mixed it'd be something like
 
-  theFile = csv.reader(open(infile,"rb"))
-
-  business_id = []
-  latitude    = []
-  longitude   = []
+	theFile = csv.reader(open(infile,"rb"))
+	business_id = []
+  	latitude    = []
+  	longitude   = []
   
-  for row in theFile:
-    business_id.append(json_data[("business_id")])
-    latitude.append(json_data[("latitude")])
-    longitude.append(json_data[("longitude")])
+  	for row in theFile:
+    	business_id.append(json_data[("business_id")])
+    	latitude.append(json_data[("latitude")])
+    	longitude.append(json_data[("longitude")])
   
