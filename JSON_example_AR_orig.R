@@ -18,8 +18,8 @@ names(json_temp)
 # [7] "review_count"  "name"          "neighborhoods" "longitude"     "state"         "stars"        
 # [13] "latitude"      "attributes"    "type"   
 
-summary<-matrix(nrow=length(json_lines), ncol=3)
-colnames(summary)<-c("business_id", "latitude", "longitude")#, "name")
+summary<-matrix(nrow=length(json_lines), ncol=6)
+colnames(summary)<-c("business_id", "latitude", "longitude", "name", "review_count","categories")
 summary
 
 # lapply didn't work for some reason so I had to make a loop. 
@@ -30,6 +30,8 @@ for(ii in 1:length(json_lines)){
   summary[ii, "latitude"]<-json$latitude 
   summary[ii, "longitude"]<-json$longitude
   summary[ii, "name"]<-json$name
+  summary[ii, "review_count"]<-json$review_count
+  #summary[ii, "categories"]<-json$categories[1]
 }
 
 head(summary)
